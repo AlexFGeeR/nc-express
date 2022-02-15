@@ -1,0 +1,18 @@
+/* Файл со стилями для всех страниц */
+
+* {
+	font-family: EB Garamond;
+	font-size: 24px;
+	color: #D3D5DA;
+}
+
+body { height:100% }
+
+h1, h2, h3, h4, h5, h6, p { margin: 0; padding: 0; }
+
+.content {
+	width: 95vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}

@@ -1,0 +1,37 @@
+/* файл со стилями общего футера */
+
+footer {
+	display: flex;
+	justify-content: center;
+	background: rgba(30, 31, 35, 0.97);
+	padding: 20px 0 20px 0;
+}
+
+.company-social {
+	display: flex;
+	justify-content: space-between;
+	width: 624px;
+}
+
+.company-social__item {
+	display:  flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 145px;
+}
+
+.company-social__item-img {
+	width:  30px;
+	height: 30px;
+}
+
+.company-social__item-text {
+	font-size: 18px;
+}
+
+@media (max-width: 1024px) {
+	.company-adress {
+		margin-top: 15px;
+		font-size: 22px;
+	}
+}

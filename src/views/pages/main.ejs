@@ -1,0 +1,19 @@
+<%- include('../fragments/heads/main.ejs'); %>
+<%- include('../fragments/header.ejs'); %>
+<% if ( counter != 0 ) { %>
+	<script>document.querySelector('.basket-counter__text').innerText = <%- counter %></script>
+<% } %>
+<main>
+	<div class='content'>
+		<div class='target-message'>
+			<h1 class='target-message__title'>Будущее наступило</h1>
+			<h2 class='target-message__subtitle'>Приобретите новый смартфон от компании Apple California Inc. у крупнейшего ресселера по стране</h2>
+			<a href="/catalog" class='target-message__link'>
+				<hr class='target-message__link-hr'/>
+				<p class='target-message__link-text'>Каталог</p>
+			</a>
+	    </div>
+	<img class='newest-img' src='img/main_img.png' alt='newest iphone'/>
+	</div>
+</main>
+<%- include('../fragments/footer.ejs'); %>

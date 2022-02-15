@@ -1,0 +1,22 @@
+<%- include('../fragments/heads/catalog.ejs'); %>
+<%- include('../fragments/header.ejs'); %>
+<% if ( counter != 0 ) { %>
+	<script>document.querySelector('.basket-counter__text').innerText = <%- counter %></script>
+<% } %>
+<main>
+	<div class="content main-catalog">
+		<div class="category-nav">
+			<h3 class="category-nav__title">Сортировка по категории:</h3>
+			<div class="category-nav__item">
+				<hr class="category-nav__hr"/>
+				<a href="#iphone-category" class="category-nav__link">IPhones</a>
+			</div>
+			<div class="category-nav__item">
+				<hr class="category-nav__hr"/>
+				<a href="#ipad-category" class="category-nav__link">IPads</a>
+			</div>
+		</div>
+		<%- include('../fragments/functional/catalog.ejs'); %>
+	</div>
+</main>
+<%- include('../fragments/footer.ejs'); %>

@@ -1,0 +1,46 @@
+<div class="product-wrapper" id="iphone-category">
+	<% products.forEach(product => { %>
+	<% if ( product.category === "IPad" ) { return } %>
+		<div class="product">
+			<div class="flipper">
+				<div class="front">
+					<img class="product__img" alt="image of <%- product.category %>" src="<%= product.imgSource %>">
+					<h2 class="product__title"><%- product.name %></h2>
+				</div>
+				<div class="back">
+					<div class="product__description"><%- product.description %></div>
+					<div class="back-bottom">
+						<button class='product-buying' onclick="basketPostInit(<%- product.id %>, '<%- product.name %>', <%- product.price %>)" type="submit">
+							<hr class="product-buying__hr"/>
+							<p class="product-buying__text">Добавить в корзину</p>
+						</button>
+						<p class="product-price"><%- product.price %>$</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	<% }); %>
+</div>
+<div class="product-wrapper" id="ipad-category">
+	<% products.forEach(product => { %>
+	<% if ( product.category === "IPhone" ) { return } %>
+		<div class="product">
+			<div class="flipper">
+				<div class="front">
+					<img class="product__img" alt="image of <%- product.category %>" src="<%= product.imgSource %>">
+					<h2 class="product__title"><%- product.name %></h2>
+				</div>
+				<div class="back">
+					<div class="product__description"><%- product.description %></div>
+					<div class="back-bottom">
+						<button class='product-buying' type="submit">
+							<hr class="product-buying__hr"/>
+							<p class="product-buying__text">Добавить в корзину</p>
+						</button>
+						<p class="product-price"><%- product.price %>$</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	<% }); %>
+</div>

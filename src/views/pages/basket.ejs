@@ -1,0 +1,12 @@
+<%- include('../fragments/heads/basket.ejs'); %>
+<%- include('../fragments/header.ejs'); %>
+<% if ( counter != 0 ) { %>
+	<script>document.querySelector('.basket-counter__text').innerText = <%- counter %></script>
+<% } %>
+<main>
+	<div class="content basket-content">
+		<h1 class="title">Корзина</h1>
+		<%- include('../fragments/functional/basket.ejs'); %> 
+	</div>
+</main>
+<%- include('../fragments/footer.ejs'); %>

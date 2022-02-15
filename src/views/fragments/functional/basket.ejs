@@ -1,0 +1,30 @@
+<% let sum = 0; %>
+<div class="basket-wrapper">
+	<% if ( list.length === 0 ) { %>
+		<div class="error">
+			<h2 class="error__text">Корзина пуста.</h2>
+		</div>
+	<% } else { %>
+		<div class="basket-categories">
+			<h2 class="basket-categories__text">Наименование товара</h2>
+			<h2 class="basket-categories__text">Количество</h2>
+			<h2 class="basket-categories__text">Ценник за единицу</h2>
+		</div>
+		<hr class="basket-hr"/>
+		<div class="basket-list">
+			<% list.forEach(item => { %>
+			<div class="basket-item" id="<%- item.id %>">
+				<p class="basket-item__name"><%- item.name %></p>
+				<p class="basket-item__count"><%- item.count %></p>
+				<p class="basket-item__price"><%- item.price %>$</p>
+				<button class="basket-item__remove" onclick="basketRemoveInit(<%- item.id %>)"><img src="img/remove-button.svg" alt="delete button"/></button>
+			</div>
+			<% sum += item.price * item.count %>
+			<% }); %>
+		</div>
+		<div class="basket-results">
+			<hr class="basket-results__hr"/>
+			<p class="basket-results__text"><%- sum %>$</p>
+		</div>
+	<% } %>
+</div>
